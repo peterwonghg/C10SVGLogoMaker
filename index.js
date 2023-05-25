@@ -3,6 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 const { Circle, Triangle, Square } = require('./lib/shapes');
+const validateColor = require('validate-color').default;
 
 // User input prompts
 inquirer
@@ -19,6 +20,13 @@ inquirer
       type: 'input',
       name: 'textColor',
       message: 'Enter the text color (color keyword or hexadecimal number):',
+      validate: function(input) {
+        if (validateColor(input)) {
+          return true;
+        } else {
+          return 'Please enter a valid color keyword or hexadecimal number.';
+        }
+    },
     },
     {
       type: 'list',
@@ -30,6 +38,13 @@ inquirer
       type: 'input',
       name: 'shapeColor',
       message: 'Enter the shape color (color keyword or hexadecimal number):',
+      validate: function(input) {
+        if (validateColor(input)) {
+          return true;
+        } else {
+          return 'Please enter a valid color keyword or hexadecimal number.';
+        }
+    },
     },
   ])
   .then((answers) => {
