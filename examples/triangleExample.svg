@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-      <polygon points="150,50 100,150 200,150" fill="#FFDB58" />
-      <text x="150" y="120" text-anchor="middle" fill="black">Yo!</text>
+      <polygon points="150,50 100,150 200,150" fill="rosybrown" />
+      <text x="150" y="100" font-size="88" text-anchor="middle" fill="#800000">O.O</text>
     </svg>

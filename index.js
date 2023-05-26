@@ -1,9 +1,8 @@
 // Required modules
 const fs = require('fs');
 const inquirer = require('inquirer');
-
-const { Circle, Triangle, Square } = require('./lib/shapes');
 const validateColor = require('validate-color').default;
+const { Circle, Triangle, Square } = require('./lib/shapes');
 
 // User input prompts
 inquirer
@@ -67,7 +66,7 @@ inquirer
     // Generate the SVG markup
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
       ${shapeObj.render()}
-      <text x="150" y="120" text-anchor="middle" fill="${textColor}">${text}</text>
+      <text x="150" y="100" font-size="88" text-anchor="middle" fill="${textColor}">${text}</text>
     </svg>`;
 
     // Save the SVG to a file
